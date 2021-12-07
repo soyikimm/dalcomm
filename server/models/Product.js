@@ -38,6 +38,17 @@ const productSchema = mongoose.Schema({
     }
 }, { timestamps: true }) //등록시간 자동업데이트
 
+
+productSchema.index({
+    title:'text',
+    description:'text'
+}, {
+    weights:{
+        title: 5, //타이틀을 5배 중점으로 검색함 
+        description: 1
+    }
+})
+
 const Product = mongoose.model('Product', productSchema);
 
 module.exports = { Product }

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
-import { Col, Card, Row, Carousel } from 'antd';
+import { Col, Card, Row } from 'antd';
 import Meta from 'antd/lib/card/Meta';
 import ImageSlider from '../../utils/ImageSlider';
 import CheckBox from './Sections/CheckBox';
+import SearchFeature from './Sections/SearchFeature';
 import { categories } from './Sections/Datas';
 
 function LandingPage() {
@@ -12,6 +13,7 @@ function LandingPage() {
     const [Skip, setSkip] = useState(0)
     const [Limit, setLimit] = useState(8)
     const [Filters, setFilters] = useState({ categories: [], price: []})
+    const [SearchTerm, setSearchTerm] = useState("")
 
     useEffect(() => {
 
@@ -40,19 +42,20 @@ function LandingPage() {
             })
     }
 
-    const loadMoreHanlder = () => {
+    // 더보기 메뉴
+    // const loadMoreHanlder = () => {
 
-        let skip = Skip + Limit
-        let body = {
-            skip: skip,
-            limit: Limit,
-            loadMore: true,
-            filters: Filters
-        }
+    //     let skip = Skip + Limit
+    //     let body = {
+    //         skip: skip,
+    //         limit: Limit,
+    //         loadMore: true,
+    //         filters: Filters
+    //     }
 
-        getProducts(body)
-        setSkip(skip)
-    }
+    //     getProducts(body)
+    //     setSkip(skip)
+    // }
 
 
     const renderCards = Products.map((product, index) => {
@@ -95,6 +98,24 @@ function LandingPage() {
          showFilteredResults(newFilters)
 
     }
+
+    const updateSearchTerm = (newSearchTerm) => {
+        setSearchTerm(newSearchTerm)
+
+        let body = {
+            skip: 0,
+            limit: Limit,
+            filters: Filters,
+            searchTerm: newSearchTerm
+        }
+
+        setSkip(0)
+        setSearchTerm(newSearchTerm)
+        getProducts(body)
+
+    }
+
+
  
     return (
        <div style={{ width: '75%', margin: '3rem auto' }}>
@@ -103,15 +124,22 @@ function LandingPage() {
                <h2> Happy with Cookies! </h2>
            </div>
 
+            
             {/* Fileter */}
 
             {/* CheckBox */}
+            <div style={{ display:'flex', justifyContent:'flex-start', margin: '1rem auto'}}>
                 <CheckBox list={categories} handleFilters={filters => handleFilters(filters, "categories")} />
-
+            </div>
             {/* RadioBox */}
 
-
             {/* Search */}
+                <div style={{ display:'flex', justifyContent:'flex-end', margin: '1rem auto'}}>
+                    <SearchFeature 
+                        refreshFunction={updateSearchTerm}
+                    />
+                </div>
+                
 
 
             {/* Cards */}
