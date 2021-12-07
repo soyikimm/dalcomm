@@ -43,19 +43,19 @@ function LandingPage() {
     }
 
     // 더보기 메뉴
-    // const loadMoreHanlder = () => {
+    const loadMoreHanlder = () => {
 
-    //     let skip = Skip + Limit
-    //     let body = {
-    //         skip: skip,
-    //         limit: Limit,
-    //         loadMore: true,
-    //         filters: Filters
-    //     }
+        let skip = Skip + Limit
+        let body = {
+            skip: skip,
+            limit: Limit,
+            loadMore: true,
+            filters: Filters
+        }
 
-    //     getProducts(body)
-    //     setSkip(skip)
-    // }
+        getProducts(body)
+        setSkip(skip)
+    }
 
 
     const renderCards = Products.map((product, index) => {
@@ -64,7 +64,7 @@ function LandingPage() {
 
          return <Col lg={6} md={8} xs={24} key={index}>
             <Card
-                cover={<ImageSlider images={product.images}/>}
+                cover={<a href={`/product/${product._id}`}><ImageSlider images={product.images}/></a>}
             >
                <Meta
                     title={product.title}
@@ -128,10 +128,13 @@ function LandingPage() {
             {/* Fileter */}
 
             {/* CheckBox */}
-            <div style={{ display:'flex', justifyContent:'flex-start', margin: '1rem auto'}}>
+            <Row gutter={[6, 6]}>
+                <Col lg={10} xs={5}>
                 <CheckBox list={categories} handleFilters={filters => handleFilters(filters, "categories")} />
-            </div>
             {/* RadioBox */}
+                </Col>
+            </Row>
+            
 
             {/* Search */}
                 <div style={{ display:'flex', justifyContent:'flex-end', margin: '1rem auto'}}>
