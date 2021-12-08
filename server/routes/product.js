@@ -99,7 +99,6 @@ router.get('/products_by_id', (req, res) => {
 
     let type = req.query.type
     let productIds = req.query.id
-
     
 
     if (type === "array") {
@@ -118,7 +117,7 @@ router.get('/products_by_id', (req, res) => {
       .populate('writer')
       .exec((err, product) => {
         if(err) return res.status(400).send(err)
-        return res.status(200).send({ success: true, product })
+        return res.status(200).send(product)
       })
 })
 
