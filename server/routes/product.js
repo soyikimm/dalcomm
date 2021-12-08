@@ -49,7 +49,7 @@ router.post('/products', (req, res) => {
 
   // product collection에 들어있는 모든 상품정보를 가져옴
 
-      let limit = req.body.limit ? parseInt(req.body.limit) : 100;
+      let limit = req.body.limit ? parseInt(req.body.limit) : 20;
       let skip = req.body.skip ? parseInt(req.body.skip) : 0;
       let term = req.body.searchTerm
 
@@ -98,7 +98,7 @@ router.post('/products', (req, res) => {
 router.get('/products_by_id', (req, res) => {
 
     let type = req.query.type
-    let productId = req.query.id
+    let productIds = req.query.id
 
     
 
@@ -114,7 +114,7 @@ router.get('/products_by_id', (req, res) => {
 
     //productId를 이용해서 DB에서 productId와 같은 상품의 정보를 가져옴
     
-    Product.find({_id: productId})
+    Product.find({_id: { $in: productIds } })
       .populate('writer')
       .exec((err, product) => {
         if(err) return res.status(400).send(err)

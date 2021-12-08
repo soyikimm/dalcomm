@@ -58,17 +58,19 @@ function LandingPage() {
     }
 
 
+    // 상품나열공간
+
     const renderCards = Products.map((product, index) => {
 
         console.log('product', product)
 
          return <Col lg={6} md={8} xs={24} key={index}>
             <Card
-                cover={<a href={`/product/${product._id}`}><ImageSlider images={product.images}/></a>}
+                cover={<a href={`/product/${product._id}`}><ImageSlider images={product.images}/></a>} //썸네일
             >
                <Meta
-                    title={product.title}
-                    description={`$${product.price}`}
+                    title={product.title} //상품이름
+                    description={`$${product.price}`} //상품가격
                 />
             </Card>
         </Col>

@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const { User } = require("../models/User");
-
 const { auth } = require("../middleware/auth");
 
 //=================================
 //             User
 //=================================
+
 
 router.get("/auth", auth, (req, res) => {
     res.status(200).json({
@@ -18,6 +18,8 @@ router.get("/auth", auth, (req, res) => {
         lastname: req.user.lastname,
         role: req.user.role,
         image: req.user.image,
+        cart: req.user.cart,
+        history: req.user.cart
     });
 });
 
@@ -68,34 +70,32 @@ router.get("/logout", auth, (req, res) => {
     });
 });
 
-router.post("/addToCart", auth, (req, res) => {
 
-    //user Collection에 해당유저의 정보를 가져온다
-    
+router.post("/addToCart", auth, (req, res) => {
+    // User collection에 해당유저의 정보 가져오기
     User.findOne({ _id: req.user._id },
         (err, userInfo) => {
-            
+            //
+            let duplicate = false;
             userInfo.cart.forEach((item) => {
-                if(item.id === req.body.productId) {
+                if (item.id === req.body.productId) {
                     duplicate = true;
                 }
             })
-            // 가져온 정보에서 상품중복이 있는지 확인
-
-            // 중복될 때
+            //상품이 있을 때 상품갯수 1개올리기
             if(duplicate) {
                 User.findOneAndUpdate(
-                    {_id: req.user._id , "cart.id" :req.body.productId },
-                    { $inc : { "cart.$.quantity": 1} },
-                    { new: true },
+                    { _id: req.user._id , "cart.id" :req.body.productId },
+                    { $inc : { "cart.$.quantity": 1 } },
+                    { new : true },
                     (err, userInfo) => {
-                        if (err) return res.status(200).json({ success: false, err })
-                        res.status(200).send(userInfo.cart)
+                        if(err) return res.status(200).json({ success: false, err })
+                        res.status(200).send(userInfo.cart) //cart를 front-end로 보내줌
                     }
                 )
-            }
-            // 중복되지 않을때
-            else{
+            } 
+            //상품없음
+            else {
                 User.findOneAndUpdate(
                     { _id: req.user._id },
                     {
@@ -112,10 +112,15 @@ router.post("/addToCart", auth, (req, res) => {
                         if(err) return res.status(400).json({ success: false, err })
                         res.status(200).send(userInfo.cart)
                     }
-                
-                )}
+                )
+            }
         })
-    
+
+
+
+
+        
 })
+
 
 module.exports = router;

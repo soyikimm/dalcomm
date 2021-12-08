@@ -38,9 +38,9 @@ export function auth(){
     }
 }
 
-export function logoutUser(){
+export function logoutUser() {
     const request = axios.get(`${USER_SERVER}/logout`)
-    .then(response => response.data);
+        .then(response => response.data);
 
     return {
         type: LOGOUT_USER,
@@ -48,12 +48,11 @@ export function logoutUser(){
     }
 }
 
-export function addToCart(id){
 
+export function addToCart(id) {
     let body = {
-        productId : id
+        productId: id
     }
-
     const request = axios.post(`${USER_SERVER}/addToCart`, body)
     .then(response => response.data);
 
