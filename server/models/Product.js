@@ -27,27 +27,27 @@ const productSchema = mongoose.Schema({
         default: 0
     },
 
-    categories: {
+    continents: {
         type: Number,
         default: 1
     },
-    
+
     views: {
         type: Number,
         default: 0
     }
-}, { timestamps: true }) //등록시간 자동업데이트
-
+}, { timestamps: true })
 
 productSchema.index({
-    title:'text',
-    description:'text'
+    title: 'text',
+    description: 'text'
 }, {
-    weights:{
-        title: 5, //타이틀을 5배 중점으로 검색함 
+    weights: {
+        title: 5,
         description: 1
     }
 })
+
 
 const Product = mongoose.model('Product', productSchema);
 

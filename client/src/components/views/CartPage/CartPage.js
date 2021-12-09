@@ -50,7 +50,7 @@ function CartPage(props) {
 
   return (
     <div style={{ width: "50%", margin: "3rem auto" }}>
-      <h1>주문/결제</h1>
+      <h5 style={{ margin: "3rem auto" }}>주문/결제</h5>
 
       <div>
         <UserCardBlock
@@ -61,7 +61,7 @@ function CartPage(props) {
 
       {ShowTotal ? (
         <div style={{ marginTop: "3rem" }}>
-          <h2>총 구매금액: {Total}원</h2>
+          <h4>총 구매금액: {Total}원</h4>
         </div>
       ) : (
         <>
