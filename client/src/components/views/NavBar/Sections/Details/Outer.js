@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Col, Row } from "antd";
 import Meta from "antd/lib/card/Meta";
-import ImageSlider from "../../utils/ImageSlider";
-import CheckBox from "./Sections/CheckBox";
-import SearchFeature from "./Sections/SearchFeature";
-import { continents } from "./Sections/Datas";
+import ImageSlider from "../../../../utils/ImageSlider";
+import CheckBox from "../../../LandingPage/Sections/CheckBox";
+import SearchFeature from "../../../LandingPage/Sections/SearchFeature";
+import { continents } from "../../../LandingPage/Sections/Datas";
 import { Carousel } from "react-bootstrap";
 
-function LandingPage() {
+function Top() {
   const [Products, setProducts] = useState([]);
   const [Skip, setSkip] = useState(0);
   const [Limit, setLimit] = useState(8);
@@ -37,20 +37,6 @@ function LandingPage() {
       }
     });
   };
-
-  // 더보기 메뉴
-  //   const loadMoreHanlder = () => {
-  //     let skip = Skip + Limit;
-  //     let body = {
-  //       skip: skip,
-  //       limit: Limit,
-  //       loadMore: true,
-  //       filters: Filters,
-  //     };
-
-  //     getProducts(body);
-  //     setSkip(skip);
-  //   };
 
   // 상품나열공간
 
@@ -112,32 +98,6 @@ function LandingPage() {
 
   return (
     <div style={{ width: "75%", margin: "3rem auto" }}>
-      {/* 대문 */}
-
-      <Carousel>
-        <Carousel.Item>
-          <img className="d-block w-100" src="/main/1.jpg" alt="First slide" />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-100" src="/main/2.jpg" alt="Second slide" />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-100" src="/main/3.jpg" alt="Thrid slide" />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-
       {/* Search */}
       <br />
       <div
@@ -151,8 +111,6 @@ function LandingPage() {
       </div>
       <br />
 
-      {/* Fileter */}
-
       {/* CheckBox */}
       <Row gutter={[6, 6]}>
         <Col lg={10} xs={5}>
@@ -160,13 +118,12 @@ function LandingPage() {
             list={continents}
             handleFilters={(filters) => handleFilters(filters, "continents")}
           />
-          {/* RadioBox */}
         </Col>
       </Row>
 
       {/* Cards */}
       <Row gutter={(16, 16)} style={{ margin: "3rem auto" }}>
-        <div style={{ margin: "2rem auto" }}> Weekly Best</div>
+        <div style={{ margin: "2rem auto" }}> Outer♥</div>
         {renderCards}
       </Row>
       <br />
@@ -174,4 +131,4 @@ function LandingPage() {
   );
 }
 
-export default LandingPage;
+export default Top;

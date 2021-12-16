@@ -44,7 +44,7 @@ function UploadProductPage(props) {
     event.preventDefault();
 
     if (!Title || !Description || !Price || !Continent || Images.length === 0) {
-      return alert("빈곳을 채워주세요 :(");
+      return alert("빈곳이 있어요 :(");
     }
 
     //서버에 채운 값들을 request로 보낸다.
@@ -73,7 +73,7 @@ function UploadProductPage(props) {
     <div style={{ maxWidth: "700px", margin: "2rem auto" }}>
       <div style={{ textAlign: "center", marginBottom: "2rem" }}>
         <br />
-        <h2> 상품 업로드 페이지 </h2>
+        <h2> Product Upload </h2>
         <br />
       </div>
 
@@ -91,15 +91,15 @@ function UploadProductPage(props) {
         </select>
         <br />
         <br />
-        <label>Title</label>
+        <label>이름</label>
         <Input onChange={titleChangeHandler} value={Title} />
         <br />
         <br />
-        <label>제품 설명</label>
+        <label>설명</label>
         <TextArea onChange={descriptionChangeHandler} value={Description} />
         <br />
         <br />
-        <label>가격($)</label>
+        <label>가격(원)</label>
         <Input type="number" onChange={priceChangeHandler} value={Price} />
         <br />
         <br />
