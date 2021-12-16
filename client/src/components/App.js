@@ -10,8 +10,8 @@ import Footer from "./views/Footer/Footer";
 import UploadProductPage from "./views/UploadProductPage/UploadProductPage.js";
 import DetailProductPage from "./views/DetailProductPage/DetailProductPage";
 import CartPage from "./views/CartPage/CartPage";
-import Top from "./views/NavBar/Sections/Details/Top";
-import Outer from "./views/NavBar/Sections/Details/Outer";
+import Notice from "./views/NavBar/Sections/Details/Notice";
+import HistoryPage from './views/HistoryPage/HistoryPage';
 
 //null   Anyone Can go inside
 //true   only logged in user can go inside
@@ -23,6 +23,7 @@ function App() {
       <NavBar />
       <div style={{ paddingTop: "69px", minHeight: "calc(100vh - 80px)" }}>
         <Switch>
+          {/* 로그인한 사람만 보여지게 true */}
           <Route exact path="/" component={Auth(LandingPage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
@@ -37,8 +38,8 @@ function App() {
             component={Auth(DetailProductPage, null)}
           />
           <Route exact path="/user/cart" component={Auth(CartPage, true)} />
-          <Route exact path="/top" component={Auth(Top, null)} />
-          <Route exact path="/outer" component={Auth(Outer, null)} />
+          <Route exact path="/notice" component={Auth(Notice, null)} />
+          <Route exact path="/history" component={Auth(HistoryPage, true)} />
         </Switch>
       </div>
       <Footer />

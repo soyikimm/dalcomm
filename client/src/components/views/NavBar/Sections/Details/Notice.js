@@ -6,9 +6,8 @@ import ImageSlider from "../../../../utils/ImageSlider";
 import CheckBox from "../../../LandingPage/Sections/CheckBox";
 import SearchFeature from "../../../LandingPage/Sections/SearchFeature";
 import { continents } from "../../../LandingPage/Sections/Datas";
-import { Carousel } from "react-bootstrap";
 
-function Top() {
+function Notice() {
   const [Products, setProducts] = useState([]);
   const [Skip, setSkip] = useState(0);
   const [Limit, setLimit] = useState(16);
@@ -121,7 +120,7 @@ function Top() {
 
       {/* Cards */}
       <Row gutter={(32, 32)}>
-        <div style={{ margin: "2rem auto" }}> Top♥</div>
+        <div style={{ margin: "2rem auto" }}> Notice </div>
         {renderCards}
       </Row>
       <br />
@@ -129,4 +128,4 @@ function Top() {
   );
 }
 
-export default Top;
+export default Notice;
