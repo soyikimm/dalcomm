@@ -35,10 +35,11 @@ function RightMenu(props) {
     //로그인 된 상태
     return (
       <Menu mode={props.mode}>
+
         {/* 장바구니 */}
         <Menu.Item key="cart" style={{ paddingBottom: 10 }}>
           {/* 담은 수량체크 */}
-          <Badge count={user.userData && user.userData.cart.length - 2}>
+          <Badge count={user.userData && user.userData.cart.length}>
             <a
               href="/user/cart"
               className="head-example"
@@ -46,10 +47,14 @@ function RightMenu(props) {
             >
               <Icon
                 type="shopping-cart"
-                style={{ fontSize: 30, marginBottom: 3 }}
+                style={{ fontSize: 30, marginBottom: 3, marginRight: 20 }}
               />
             </a>
           </Badge>
+        </Menu.Item>
+
+        <Menu.Item key="history">
+          <a href="/history">History</a>
         </Menu.Item>
 
         <Menu.Item key="upload">

@@ -11,7 +11,7 @@ import { Carousel } from "react-bootstrap";
 function LandingPage() {
   const [Products, setProducts] = useState([]);
   const [Skip, setSkip] = useState(0);
-  const [Limit, setLimit] = useState(8);
+  const [Limit, setLimit] = useState(32);
   const [Filters, setFilters] = useState({ continents: [], price: [] });
   const [SearchTerm, setSearchTerm] = useState("");
 
@@ -58,7 +58,7 @@ function LandingPage() {
     console.log("product", product);
 
     return (
-      <Col lg={6} md={8} xs={24} key={index}>
+      <Col lg={6} md={8} xs={24} key={index} style={{ margin: "2rem auto" }}>
         {/* 상품 이미지 */}
 
         <div>
@@ -67,11 +67,12 @@ function LandingPage() {
           </a>
         </div>
         <Meta
-          style={{ margin: "1rem auto" }}
+        style={{ margin: "1rem auto" }}
           title={product.title} //상품이름
-          description={`${product.price}원`} //상품가격
+          description={`$${product.price}`} //상품가격
         />
       </Col>
+      
     );
   });
 
@@ -166,7 +167,7 @@ function LandingPage() {
 
       {/* Cards */}
       <Row gutter={(16, 16)} style={{ margin: "3rem auto" }}>
-        <div style={{ margin: "2rem auto" }}> Weekly Best</div>
+        <div style={{ margin: "2rem auto" }}> Items ♥</div>
         {renderCards}
       </Row>
       <br />
