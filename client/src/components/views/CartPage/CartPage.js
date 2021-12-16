@@ -5,7 +5,7 @@ import {
   removeCartItem,
   onSuccessBuy,
 } from "../../../_actions/user_actions";
-import UserCardBlock from "./Sections/UserCardBlock";
+import UserCardBlock from "./UserCardBlock/UserCardBlock";
 import { Empty, Result } from "antd";
 import Paypal from "../../utils/Paypal";
 
