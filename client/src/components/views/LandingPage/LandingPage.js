@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Col, Row } from "antd";
+import { Col, Row, Card, Image } from "antd";
 import Meta from "antd/lib/card/Meta";
 import ImageSlider from "../../utils/ImageSlider";
 import CheckBox from "./Sections/CheckBox";
@@ -67,12 +67,11 @@ function LandingPage() {
           </a>
         </div>
         <Meta
-        style={{ margin: "1rem auto" }}
+          style={{ margin: "1rem auto" }}
           title={product.title} //상품이름
           description={`$${product.price}`} //상품가격
         />
       </Col>
-      
     );
   });
 

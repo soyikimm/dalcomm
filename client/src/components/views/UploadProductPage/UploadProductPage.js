@@ -9,8 +9,9 @@ const Continents = [
   { key: 2, value: "Top" },
   { key: 3, value: "Pants" },
   { key: 4, value: "Skirt" },
-  { key: 5, value: "Dress" },
-  { key: 6, value: "Etc" },
+  { key: 5, value: "Bag" },
+  { key: 6, value: "Shoes" },
+  { key: 7, value: "Etc" },
 ];
 
 function UploadProductPage(props) {

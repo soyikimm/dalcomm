@@ -9,7 +9,7 @@ const continents = [
   },
   {
     _id: 3,
-    name: "Pants",
+    name: "pants",
   },
   {
     _id: 4,
@@ -17,10 +17,14 @@ const continents = [
   },
   {
     _id: 5,
-    name: "Dress",
+    name: "Bag",
   },
   {
     _id: 6,
+    name: "Shoes",
+  },
+  {
+    _id: 7,
     name: "E.T.C",
   },
 ];

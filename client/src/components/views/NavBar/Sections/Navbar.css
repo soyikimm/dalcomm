@@ -1,16 +1,5 @@
 @import "~antd/dist/antd.css";
 
-.div {
-  color: black;
-}
-
-.section {
-  float: left;
-  font-weight: lighter;
-  color: black;
-  margin-top: 6px;
-}
-
 .menu {
   padding: 0 20px;
   border-bottom: solid 1px #e8e8e8;
@@ -20,21 +9,14 @@
 }
 
 .menu__logo {
-  margin-left: 10px;
-  width: 200px;
+  width: 150px;
   float: left;
-  color: black;
 }
 
 .menu__logo a {
   display: inline-block;
   font-size: 20px;
   padding: 19px 20px;
-  color: gray;
-}
-
-.menu__logo a:hover {
-  color: black;
 }
 
 .menu__container .ant-menu-item {
@@ -48,7 +30,6 @@
 .menu__container .ant-menu-item a,
 .menu__container .ant-menu-submenu-title a {
   padding: 10px 15px;
-  color: gray;
 }
 
 .menu__container .ant-menu-horizontal {
@@ -57,12 +38,10 @@
 
 .menu__container .menu_left {
   float: left;
-  color: gray;
 }
 
 .menu__container .menu_rigth {
   float: right;
-  color: black;
 }
 
 .menu__mobile-button {
@@ -71,7 +50,7 @@
   padding: 6px;
   margin-top: 8px;
   display: none !important; /* use of important to overwrite ant-btn */
-  background: gray;
+  background: #3e91f7;
 }
 
 .menu_drawer .ant-drawer-body {
@@ -84,18 +63,17 @@
 }
 
 @media (max-width: 767px) {
-  .menu__mobile-button:hover {
-    color: black;
-  }
   .menu__mobile-button {
     display: inline-block !important;
-    color: white;
-    border: black;
   }
 
   .menu_left,
   .menu_rigth {
     display: none;
+  }
+
+  .menu__logo a {
+    margin-left: -20px;
   }
 
   .menu__container .ant-menu-item,
@@ -105,6 +83,5 @@
 
   .menu__logo a {
     padding: 10px 20px;
-    color: black;
   }
 }
