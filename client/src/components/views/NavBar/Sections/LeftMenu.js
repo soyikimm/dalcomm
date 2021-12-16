@@ -5,9 +5,9 @@ const SubMenu = Menu.SubMenu;
 function LeftMenu(props) {
   return (
     <Menu mode={props.mode}>
-      <Menu.Item key="notice">
+      {/* <Menu.Item key="notice">
         <a href="/notice">Notice</a>
-      </Menu.Item>
+      </Menu.Item> */}
     </Menu>
   );
 }

@@ -7,11 +7,9 @@ const { TextArea } = Input;
 const Continents = [
   { key: 1, value: "Outer" },
   { key: 2, value: "Top" },
-  { key: 3, value: "Pants" },
-  { key: 4, value: "Skirt" },
-  { key: 5, value: "Bag" },
-  { key: 6, value: "Shoes" },
-  { key: 7, value: "Etc" },
+  { key: 3, value: "Bottom" },
+  { key: 4, value: "Dress" },
+  { key: 5, value: "Etc" },
 ];
 
 function UploadProductPage(props) {

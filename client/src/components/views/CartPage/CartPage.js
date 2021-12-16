@@ -67,8 +67,17 @@ function CartPage(props) {
   };
 
   return (
-    <div style={{ width: "85%", margin: "3rem auto" }}>
-      <h1>My Cart</h1>
+    <div
+      style={{
+        width: "80%",
+        margin: "3rem auto",
+        paddingRight: "10%",
+        paddingLeft: "16%",
+      }}
+    >
+      <div style={{ textAlign: "center", paddingBottom: "5%" }}>
+        <h1>주문하기</h1>
+      </div>
 
       <div>
         <UserCardBlock
@@ -78,19 +87,20 @@ function CartPage(props) {
       </div>
 
       {ShowTotal ? (
-        <div style={{ marginTop: "3rem" }}>
-          <h2>Total Amount: ${Total}</h2>
+        <div style={{ marginTop: "3rem", paddingBottom: "5%" }}>
+          <h2>총 주문금액: ${Total}</h2>
+          {ShowTotal && <Paypal total={Total} onSuccess={transactionSuccess} />}
         </div>
       ) : ShowSuccess ? (
-        <Result status="success" title="Successfully Purchased Items" />
+        <Result status="success" title="구매완료 :)" />
       ) : (
         <>
           <br />
-          <Empty description={false} />
+          <div style={{ marginTop: "10rem", paddingBottom: "5%" }}>
+            <Empty description={false} />
+          </div>
         </>
       )}
-
-      {ShowTotal && <Paypal total={Total} onSuccess={transactionSuccess} />}
     </div>
   );
 }

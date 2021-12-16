@@ -160,7 +160,6 @@ function LandingPage() {
             list={continents}
             handleFilters={(filters) => handleFilters(filters, "continents")}
           />
-          {/* RadioBox */}
         </Col>
       </Row>
 

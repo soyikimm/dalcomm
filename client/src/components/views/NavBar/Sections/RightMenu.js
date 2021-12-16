@@ -5,6 +5,7 @@ import axios from "axios";
 import { USER_SERVER } from "../../../Config";
 import { withRouter } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Button } from "bootstrap";
 
 function RightMenu(props) {
   const user = useSelector((state) => state.user);
@@ -35,7 +36,6 @@ function RightMenu(props) {
     //로그인 된 상태
     return (
       <Menu mode={props.mode}>
-
         {/* 장바구니 */}
         <Menu.Item key="cart" style={{ paddingBottom: 3 }}>
           {/* 담은 수량체크 */}
@@ -47,15 +47,15 @@ function RightMenu(props) {
             >
               <Icon
                 type="shopping-cart"
-                style={{ fontSize: 30, marginBottom: 3, marginRight: 20 }}
+                style={{ fontSize: 30, marginBottom: 10, marginRight: 10 }}
               />
             </a>
           </Badge>
         </Menu.Item>
 
-        <Menu.Item key="history">
+        {/* <Menu.Item key="history">
           <a href="/history">History</a>
-        </Menu.Item>
+        </Menu.Item> */}
 
         <Menu.Item key="upload">
           <a href="/product/upload">Upload</a>
