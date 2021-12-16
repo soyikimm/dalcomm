@@ -37,7 +37,7 @@ function RightMenu(props) {
       <Menu mode={props.mode}>
 
         {/* 장바구니 */}
-        <Menu.Item key="cart" style={{ paddingBottom: 10 }}>
+        <Menu.Item key="cart" style={{ paddingBottom: 3 }}>
           {/* 담은 수량체크 */}
           <Badge count={user.userData && user.userData.cart.length}>
             <a
