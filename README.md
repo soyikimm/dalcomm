@@ -1,3 +1,36 @@
+How to use Markdown? 
+============ 
+Markdown 
+- 
+can be used as follows. 
+
+### Blackquotes 
+>Blackquotes1 
+>>Sub Blackquotes2 
+
+>###header + blackquotes 
+
+
+###Code representation method 
+----- 
+“`var x = 0“` 
+
+var foo = “bar” 
+<html> </html> 
+
+###List representation method 
++ plus 
+* star 
+- hyphen 
+
+###Numeric list representation method 
+1. num1 
+1. num2 
+
+### Hyperlink 
+[blog](blog.naver.com/tpgns8488) 
+
+
 Dalcom쇼핑몰 with React.js, Node.js</br>
 
 프론트 : Html, Css, Bootstrap, React 
