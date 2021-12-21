@@ -1,4 +1,4 @@
-Dalcom쇼핑몰 
+Dalcom 
 ============ 
 </br></br>
 
