@@ -1,7 +1,7 @@
-Dalcom쇼핑몰 with React.js, Node.js
+Dalcom쇼핑몰 with React.js, Node.js</br>
 
-프론트 : Html, Css, Bootstrap, React
-백엔드 : Node.js, MongoDB, Redux, Express JS
+프론트 : Html, Css, Bootstrap, React 
+백엔드 : Node.js, MongoDB, Redux, Express JS</br>
 
 개발환경 : VS Code
 
