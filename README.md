@@ -11,7 +11,7 @@ Dalcom
 </br></br>
 ### Hyperlink 
 [Heroku Web배포](https://pacific-crag-89307.herokuapp.com/)</br>
-[Github주소](https://github.com/soyikimm/dalcom/) </br>
+[Github주소](https://github.com/soyikimm/dalcomm/) </br>
 
 </br></br>
 프로젝트 기능 :
