@@ -3,6 +3,9 @@
  Dalcom Shop with React.js, Node.js
  </br></br>
 
+### Hyperlink 
+[Heroku Web배포](https://pacific-crag-89307.herokuapp.com/)</br>
+[Github주소](https://github.com/soyikimm/dalcomm/) </br>
 
 ###개발언어 및 환경
 ----- 
@@ -22,9 +25,7 @@
     - 상품 주문 및 결제
 
 </br></br>
-### Hyperlink 
-[Heroku Web배포](https://pacific-crag-89307.herokuapp.com/)</br>
-[Github주소](https://github.com/soyikimm/dalcomm/) </br>
+
 
 
     
