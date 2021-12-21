@@ -1,46 +1,15 @@
-Dalcom Shoppingmall with React.js, Node.js
+Dalcom쇼핑몰 with React.js, Node.js</br>
 ============ 
-Markdown 
-- 
-can be used as follows. 
 
-### Blackquotes 
->Blackquotes1 
->>Sub Blackquotes2 
-
->###header + blackquotes 
-
-
-###Code representation method 
+###개발언어 및 환경
 ----- 
-“`var x = 0“` 
-
-var foo = “bar” 
-<html> </html> 
-
-###List representation method 
-+ plus 
-* star 
-- hyphen 
-
-###Numeric list representation method 
-1. num1 
-1. num2 
+- 프론트 : Html, Css, Bootstrap, React 
+- 백엔드 : Node.js, MongoDB, Redux, Express JS</br>
+- 개발환경 : VS Code
 
 ### Hyperlink 
-[blog](blog.naver.com/tpgns8488) 
-[Github](https://github.com/soyikimm/dalcom/)
+[Github](https://github.com/soyikimm/dalcom/) </br>
 [Heroku Web배포](https://pacific-crag-89307.herokuapp.com/)
-
-
-Dalcom쇼핑몰 with React.js, Node.js</br>
-
-프론트 : Html, Css, Bootstrap, React 
-백엔드 : Node.js, MongoDB, Redux, Express JS</br>
-
-개발환경 : VS Code
-
-
 
 
 프로젝트 기능 :
