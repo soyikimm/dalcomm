@@ -18,9 +18,7 @@ Heroku Web배포 : https://pacific-crag-89307.herokuapp.com/
     - 체크박스로 카테고리 기능 구현
     - 상품 장바구니 기능 구현
     - 상품 주문 및 결제
-    </br></br>
     
-
  
 
 프로젝트 스크린샷(요약)</br></br>
