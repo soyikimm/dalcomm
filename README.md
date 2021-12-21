@@ -10,8 +10,8 @@ Dalcom쇼핑몰
 
 </br></br>
 ### Hyperlink 
-[Github](https://github.com/soyikimm/dalcom/) </br>
-[Heroku Web배포](https://pacific-crag-89307.herokuapp.com/)
+[Heroku Web배포](https://pacific-crag-89307.herokuapp.com/)</br>
+[Github주소](https://github.com/soyikimm/dalcom/) </br>
 
 </br></br>
 프로젝트 기능 :
