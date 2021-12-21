@@ -1,7 +1,6 @@
 
 # Dalcom 
  Dalcom Shop with React.js, Node.js
-===
 
 
 ###개발언어 및 환경
