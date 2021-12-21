@@ -4,7 +4,7 @@ Dalcom
 
 ###개발언어 및 환경
 ----- 
-- 프론트 : Html, Css, Bootstrap, React 
+- 프론트 : Html, C, Bootstrap, React 
 - 백엔드 : Node.js, MongoDB, Redux, Express JS</br>
 - 개발환경 : VS Code
 
