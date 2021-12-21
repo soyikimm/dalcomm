@@ -1,5 +1,6 @@
-Dalcom쇼핑몰 with React.js, Node.js</br>
+Dalcom쇼핑몰 
 ============ 
+</br></br>
 
 ###개발언어 및 환경
 ----- 
@@ -7,11 +8,12 @@ Dalcom쇼핑몰 with React.js, Node.js</br>
 - 백엔드 : Node.js, MongoDB, Redux, Express JS</br>
 - 개발환경 : VS Code
 
+</br></br>
 ### Hyperlink 
 [Github](https://github.com/soyikimm/dalcom/) </br>
 [Heroku Web배포](https://pacific-crag-89307.herokuapp.com/)
 
-
+</br></br>
 프로젝트 기능 :
 
     - 회원가입
