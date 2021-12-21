@@ -11,11 +11,6 @@
 - 개발환경 : VS Code
 
 </br></br>
-### Hyperlink 
-[Heroku Web배포](https://pacific-crag-89307.herokuapp.com/)</br>
-[Github주소](https://github.com/soyikimm/dalcomm/) </br>
-
-</br></br>
 프로젝트 기능 :
 
     - 회원가입
@@ -25,5 +20,12 @@
     - 체크박스로 카테고리 기능 구현
     - 상품 장바구니 기능 구현
     - 상품 주문 및 결제
+
+</br></br>
+### Hyperlink 
+[Heroku Web배포](https://pacific-crag-89307.herokuapp.com/)</br>
+[Github주소](https://github.com/soyikimm/dalcomm/) </br>
+
+
     
  
