@@ -1,4 +1,4 @@
-How to use Markdown? 
+Dalcom Shoppingmall with React.js, Node.js
 ============ 
 Markdown 
 - 
@@ -38,8 +38,7 @@ Dalcom쇼핑몰 with React.js, Node.js</br>
 
 개발환경 : VS Code
 
-Github : https://github.com/soyikimm/dalcom/ </br>
-Heroku Web배포 : https://pacific-crag-89307.herokuapp.com/
+
 
 
 프로젝트 기능 :
