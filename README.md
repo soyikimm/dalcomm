@@ -29,6 +29,8 @@ var foo = “bar”
 
 ### Hyperlink 
 [blog](blog.naver.com/tpgns8488) 
+[Github](https://github.com/soyikimm/dalcom/)
+[Heroku Web배포](https://pacific-crag-89307.herokuapp.com/)
 
 
 Dalcom쇼핑몰 with React.js, Node.js</br>
