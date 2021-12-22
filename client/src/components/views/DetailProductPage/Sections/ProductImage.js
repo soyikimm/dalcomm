@@ -10,8 +10,8 @@ function ProductImage(props) {
 
       props.detail.images.map((item) => {
         images.push({
-          original: `http://localhost:5000/${item}`,
-          thumbnail: `http://localhost:5000/${item}`,
+          original: `https://pacific-crag-89307.herokuapp.com/${item}`,
+          thumbnail: `https://pacific-crag-89307.herokuapp.com/${item}`,
         });
       });
       setImages(images);

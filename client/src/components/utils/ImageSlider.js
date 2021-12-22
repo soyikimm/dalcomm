@@ -9,7 +9,7 @@ function ImageSlider(props) {
           <div key={index}>
             <img
               style={{ width: "100%", maxHeight: "100%" }}
-              src={`http://localhost:5000/${image}`}
+              src={`https://pacific-crag-89307.herokuapp.com/${image}`}
             ></img>
           </div>
         ))}
