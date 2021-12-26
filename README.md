@@ -24,8 +24,10 @@
 </br>User 관련 State은 Redux로 관리합니다.
 </br>Authenticate는 username filter 기반으로 jwt를 사용합니다.
 - 상품 업로드 기능 구현
+</br>Multer모듈을 사용하여 사용자가 전송한 이미지파일을 처리하는 작업을 합니다.
 </br>Product Model를 만들어 정보를 서버로 보낸 후 보낸정보를 MongoDB에 저장합니다.
-</br>MongoDB에 저장된 데이터들을 가져와 상품리스트를 보여줍니다.
+</br>MongoDB에 저장된 데이터들을 map() methods를 사용해 상품리스트를 보여줍니다.
+
 
 - 검색기능
 </br>SearchFeature Component를 만들어 검색 값을 이용한 getProduct Function을 작동합니다.
